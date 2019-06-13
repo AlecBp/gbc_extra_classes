@@ -9,7 +9,11 @@ var decimalAdded = false;
 
 // Add onclick event to all the keys and perform operations
 for (var i = 0; i < keys.length; i++) {
-	keys[i].onclick = function(e) {
+	keys[i].addEventListener("click", gotClicked);
+}
+
+function gotClicked(e) {
+	{
 		var displayVal = display.innerHTML;
 		var btnVal = this.innerHTML;
 
@@ -44,7 +48,7 @@ for (var i = 0; i < keys.length; i++) {
 		// Now that we have the basic funtionality, we need to solve some issues...like...
 		// 1. Prevent consecutive operators
 		// 2. Only the minus operator can start an equation
-      // 3. Only 1 decimal per number
+		// 3. Only 1 decimal per number
 		else if (operators.indexOf(btnVal) != -1) {
 			// Operator is clicked
 			// Get the last character from the equation
@@ -53,13 +57,13 @@ for (var i = 0; i < keys.length; i++) {
 			// Only add operator if input is not empty and there is no operator at the last
 			if (displayVal != "" && operators.indexOf(lastChar) == -1) {
 				display.innerHTML += btnVal;
-         }
-         
+			}
+
 			// Allow minus if the string is empty
 			else if (displayVal == "" && btnVal == "-") {
 				display.innerHTML += btnVal;
-         }
-         
+			}
+
 			// Replace the last operator (if exists) with the newly pressed operator
 			if (operators.indexOf(lastChar) != -1 && displayVal.length > 1) {
 				// Another regular expression, similar to the previous one... the $ sign denotes the end of string
@@ -83,5 +87,5 @@ for (var i = 0; i < keys.length; i++) {
 		}
 
 		e.preventDefault();
-	};
+	}
 }
