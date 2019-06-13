@@ -1,0 +1,109 @@
+* {
+	font-family: "Quantico", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: rgb(190, 234, 245);
+}
+
+h1 {
+	text-align: center;
+	font-size: 70px;
+	margin: 50px 0 10px;
+	letter-spacing: 15px;
+}
+h2 {
+	text-align: center;
+	font-size: 40px;
+	margin: 10px 0 50px;
+	letter-spacing: 5px;
+}
+/* Calculator body */
+#calculator {
+	width: 400px;
+	height: auto;
+	margin: auto;
+	padding: 20px 20px 9px;
+	background: #9dd2ea;
+	background: linear-gradient(#6a9fb8, #4085a5);
+	border-radius: 3px;
+	box-shadow: 0px 4px #009de4, 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+/* Display */
+#display {
+	overflow: hidden;
+	height: 60px;
+	padding: 0 10px;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 3px;
+	box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+	/* Font related */
+	font-size: 30px;
+	line-height: 60px; /*Match height with line-height*/
+	color: white;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+	text-align: right;
+	letter-spacing: 2px;
+}
+
+/* Keypad */
+/* Keypad container using FlexBox*/
+#keypad {
+	margin: 10px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+/* For all keys */
+#keypad span {
+	display: inline-block;
+	user-select: none;
+
+	width: 22.5%;
+	height: 60px;
+	margin: 5px auto;
+
+	font-size: 40px;
+	line-height: 60px;
+	text-align: center;
+
+	background: white;
+	border-radius: 3px;
+	box-shadow: 0px 4px rgba(0, 0, 0, 0.4);
+
+	transition: all 0.2s ease;
+}
+#keypad span:hover {
+   background: rgb(231, 229, 229);
+}
+/* Eval key */
+#keypad span.eval {
+	background: rgb(125, 236, 130);
+}
+#keypad span.eval:hover {
+	background: rgb(73, 175, 78);
+}
+/* Clear key */
+#keypad span.clear {
+	background: rgb(235, 129, 129);
+	flex-basis: 97.5%;
+}
+#keypad span.clear:hover {
+	background: rgb(228, 99, 99);
+}
+/* Other operators */
+#keypad span.operator {
+	background: rgb(189, 186, 186);
+}
+#keypad span.operator:hover {
+	background: rgb(129, 127, 127);
+}
+/* Press effect */
+#keypad span:active {
+	box-shadow: 0px 0px rgba(0, 0, 0, 0.4);
+	margin: 7px auto 5px;
+	height: 58px;
+}
