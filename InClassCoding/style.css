@@ -1,0 +1,95 @@
+/*  */
+* {
+   font-family: 'Quantico', sans-serif;
+}
+html {
+   background-color: rgb(190, 234, 245);
+}
+h1, h2 {
+   text-align: center;
+   letter-spacing: 5px;
+}
+h1 {
+   font-size: 70px;
+}
+h2 {
+   font-size: 50px;
+}
+/* Calculator body */
+#calculator {
+   width: 400px;
+   margin: 50px auto;
+   background-color: rgb(72, 106, 114);
+   padding: 20px 20px 9px;
+   border-radius: 3px;
+   box-shadow: 0px 4px #009de4, 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+/* Display */
+#display {
+	overflow: hidden;
+	height: 60px;
+	padding: 0 10px;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 3px;
+	/* Font related */
+	font-size: 30px;
+	line-height: 60px; /*Match height with line-height*/
+	color: white;
+	text-align: right;
+	letter-spacing: 2px;
+}
+
+/* Keypad */
+#keypad {
+	margin: 10px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+/* For all keys */
+#keypad span {
+	display: inline-block;
+	user-select: none; /* Makes the text inside the unselectable*/
+
+	width: 22.5%;
+	height: 60px;
+	margin: 5px auto;
+
+	font-size: 40px;
+	line-height: 60px;
+	text-align: center;
+
+	background: white;
+	border-radius: 3px;
+	box-shadow: 0px 4px rgba(0, 0, 0, 0.4);
+
+	transition: all 0.2s ease;
+}
+
+
+/* Dont copy yet */
+
+
+
+
+/* Eval key */
+#keypad span.eval {
+	background: rgb(125, 236, 130);
+}
+
+#keypad span.clear {
+	background: rgb(235, 129, 129);
+	flex-basis: 97.5%;
+}
+/* Other operators */
+#keypad span.operator {
+	background: rgb(189, 186, 186);
+}
+
+/* Press effect */
+#keypad span:active {
+	box-shadow: 0px 0px rgba(0, 0, 0, 0.4);
+	margin: 7px auto 5px;
+	height: 58px;
+}
