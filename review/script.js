@@ -1,25 +1,28 @@
-var arr = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
-// var split = arr.split(" ");
-// console.log(split);
-var letters = ["a", "b", "c", "i", "u"];
-var counter = [0, 0, 0, 0, 0];
+// bit.ly/alec_attendance
+var myArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+var myOtherArray = [12, 54, 65, 876, 23, 97, 41];
 
-for (let i = 0; i < letters.length; i++) {
-	for (let j = 0; j < arr.length; j++) {
-		if (letters[i] == arr[j]) {
-			counter[i] = counter[i] + 1;
-		}
+myOtherArray[myOtherArray.length] = 50;
+console.log(myOtherArray);
+
+for (let i = myOtherArray.length - 1; i >= 0; i--) {
+	console.log(myOtherArray[i]);
+}
+
+for (let i = 0; i < myOtherArray.length; i++) {
+	if (myOtherArray[i] % 2 == 0) {
+		// even
+		myOtherArray[i] = myOtherArray[i] + 1;
 	}
 }
-for (let i = 0; i < letters.length; i++) {
-	console.log(`Letter ${letters[i]} = ${counter[i]}`);
+console.log(myOtherArray);
+
+for (let i = 0; i < myArray.length; i++) {
+	console.log(`val of i: ${i} // array item: ${myArray[i]}`);
+	// console.log("val of i: "+i+" // array item: "+myArray[i]);
+	if (myArray[i] == 5) {
+		console.log("number 5 found!");
+		myArray[i] = "Gotcha";
+	}
 }
-
-// counter = 0;
-// for (let i = 0; i < arr.length; i++) {
-// 	if (arr[i] == "b") {
-// 		counter++;
-// 	}
-// }
-
-// console.log(`Number of C: ${counter}`);
+console.log(myArray);
