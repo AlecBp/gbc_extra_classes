@@ -1,0 +1,14 @@
+https://git-scm.com/downloads
+reboot
+check if it is working "git --version"
+cd - change directory
+cd .. - one folder back
+dir - to see content of the current directory
+mkdir - make directory (create folder)
+git clone https://github.com/AlecBp/gbc_extra_classes.git - clone git directory
+git pull - update folder
+
+
+
+More on git https://www.codecademy.com/learn/learn-git
+https://education.github.com/pack#offers

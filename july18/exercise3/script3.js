@@ -2,7 +2,15 @@ function mergeArrays() {
 	out = [];
 	for (let i = 0; i < arguments.length; i++) {
 		for (let j = 0; j < arguments[i].length; j++) {
-			out[out.length] = arguments[i][j];
+			let canAdd = true;
+			for (let x = 0; x < out.length; x++) {
+				if (out[x] == arguments[i][j]) {
+					canAdd = false;
+				}
+			}
+			if (canAdd) {
+				out[out.length] = arguments[i][j];
+			}
 		}
 	}
 	return out;
