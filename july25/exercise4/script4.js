@@ -14,7 +14,13 @@ function bubbleSort(arr) {
 			// Check if previous element is greater than next one
 			let prev = arr[j - 1];
 			let cur = arr[j];
-
+			if(isNaN(prev)) {
+				prev = prev.charCodeAt(0);
+			}
+			if(isNaN(cur)) {
+				cur = cur.charCodeAt(0);
+			}
+			
 			if (prev > cur) {
 				// Array swap
 				let tmp = arr[j - 1];
